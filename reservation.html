@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça sua reserva!</title>
+</head>
+<body>
+    <header>
+        <h1>Reserva Hotel des Vampires</h1>
+    </header>
+    <main>
+        <form action="confirmation.html" method="post">
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required><br><br>
+                
+                <label for="documento">CPF:</label>
+                <input type="text" id="documento" name="documento" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalhes da Reserva</legend>
+                <label for="checkin">Data de Check-in:</label>
+                <input type="date" id="checkin" name="checkin" required><br><br>
+                
+                <label for="checkout">Data de Check-out:</label>
+                <input type="date" id="checkout" name="checkout" required><br><br>
+                
+                <label for="hospedes">Número de Hóspedes:</label>
+                <select id="hospedes" name="hospedes" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tipo de Quarto</legend>
+                <label>
+                    <input type="radio" name="tipoQuarto" value="standard" required> Standard
+                </label><br>
+                <label>
+                    <input type="radio" name="tipoQuarto" value="deluxe"> Deluxe
+                </label><br>
+                <label>
+                    <input type="radio" name="tipoQuarto" value="suite"> Suíte
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Serviços Adicionais</legend>
+                <label>
+                    <input type="checkbox" name="servicos" value="cafe"> Café da manhã
+                </label><br>
+                <label>
+                    <input type="checkbox" name="servicos" value="estacionamento"> Estacionamento
+                </label><br>
+                <label>
+                    <input type="checkbox" name="servicos" value="wifi"> Wi-Fi Premium
+                </label><br>
+                <label>
+                    <input type="checkbox" name="servicos" value="spa"> Acesso ao spa
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Requisições:</legend>
+                <label for="comentarios">Comentários ou Acomodações para Deficiências:</label><br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Método de Pagamento</legend>
+                <label for="pagamento">Escolha um método:</label>
+                <select id="pagamento" name="pagamento" required>
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="transferencia">Transferência Bancária</option>
+                    <option value="chegada">Pagamento na Chegada</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <label>
+                    <input type="checkbox" id="termos" name="termos" required> Aceito os termos e condições
+                </label>
+            </fieldset>
+            
+            <button type="submit">Confirmar Reserva</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; Hotel des Vampires. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
